@@ -1,0 +1,17 @@
+local blacklistedIds = {
+    4546120641
+}
+
+local playerId = game.Players.LocalPlayer.UserId
+local isBlacklisted = false
+
+for _, id in pairs(blacklistedIds) do
+    if playerId == id then
+        isBlacklisted = true
+        break
+    end
+end
+
+if isBlacklisted then
+    game.Players.LocalPlayer:Kick("You Are Blacklisted For Spamming! Contact: po3batb")
+end
